@@ -1,0 +1,24 @@
+{
+  "name": "kissan-drishti",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "netlify dev",
+    "dev:local": "node scripts/build-frontend.mjs && node dev-server.mjs",
+    "build:frontend": "node scripts/build-frontend.mjs",
+    "build": "netlify build --offline",
+    "test": "node --test",
+    "test:api": "node --test tests/*.test.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.1",
+    "netlify-cli": "^27.14.2"
+  },
+  "dependencies": {
+    "@google/genai": "^2.31.0"
+  }
+}
